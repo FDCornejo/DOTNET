@@ -25,5 +25,8 @@ namespace Training.Controllers
         {
             return await _IoC.GetService<GetUsers>().Execute();
         }
+
+
+
     }
 }

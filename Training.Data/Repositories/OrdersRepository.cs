@@ -4,7 +4,13 @@ using System.Text;
 
 namespace Training.Data.Repositories
 {
-    class OrdersRepository
+    public class OrdersRepository
     {
+        private readonly StoreContext _StoreContext;
+
+        public OrdersRepository(StoreContext storeContext)
+        {
+            _StoreContext = storeContext;
+        }
     }
 }
