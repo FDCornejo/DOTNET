@@ -10,14 +10,24 @@ namespace Training.Data.Extensions
         {
             return new DTO.Order
             {
-                Id = o.Id.ToString(),
-                UserId= o.UserId.ToString(),
-                Status=o.ToString(),
+                Id = o.Id,
+                UserId= o.UserId,
+                //Status=o.Status,
+               // CreatedAt=o.CreatedAt
 
+        
+            };
+        }
+        public static Models.Order ToDatabaseModel(this DTO.Order o) {
 
-                Id = u.Id.ToString(),
-                Email = u.Email,
-                FullName = u.FullName
+            return new Models.Order
+            {
+
+                Id = o.Id,
+                UserId = o.UserId,
+               // Status = o.Status,
+              // CreatedAt= o.CreatedAt
+
             };
         }
 
